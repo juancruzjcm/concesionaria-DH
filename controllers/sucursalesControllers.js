@@ -28,11 +28,11 @@ const sucursal={
 
             if(call.sucursal == id){
 
-                res.write(`     SUCURSAL: " + ${call.sucursal}
+                res.write(`     SUCURSAL: ${call.sucursal}
                                 TELEFONO: ${call.telefono}
-                `);
+                `);                
                 res.write("\n\n");
-                res.write("=============================== \n")
+                res.write("=============================== \n");
                 res.write("\n\n");
                 
                 //Hago un forEach para listar autos
@@ -55,12 +55,20 @@ const sucursal={
                 //Contador de autos
                 res.write("Cantidad de autos: " + call.autos.length);
                 res.end();
-            } else{
+            } /* else if (call.sucursal != id){
                 
                 res.write(id + "NO TENEMOS SUCURSALE EN ESA DIRECCION!")
-            }               
+            }  */              
         })
-        res.end("Error 404")        
+        res.end(` 
+        
+        •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+        •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                            ERROR 404 NOT FOUND
+        •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+        •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+        
+        `)        
     },              
 }
 module.exports = sucursal;

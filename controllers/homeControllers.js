@@ -10,8 +10,8 @@ let home ={
         res.write("\n\n");
         //Lista de sucursales
         res.write("Sucursales: \n\n");
-        leeJson.forEach((call)=>{
-            res.write(call.sucursal)
+        leeJson.forEach((i)=>{
+            res.write(i.sucursal + "\n")
         })
         res.end();
     }
